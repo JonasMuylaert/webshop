@@ -8,7 +8,7 @@ node {
     stage('test') {
         nodejs(nodeJSInstallationName: 'nodejs') {
             sh 'npm install --only=dev'
-            sh 'npm test'
+            sh 'node ./node_modules/mocha/bin/mocha'
         }
     }
     stage('docker build/push'){
