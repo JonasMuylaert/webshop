@@ -20,6 +20,17 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
+    - task: SonarCloudPrepare@1
+      inputs:
+        SonarCloud: 'SonarCloud'
+        organization: 'jonasmuylaert'
+        scannerMode: 'MSBuild'
+        projectKey: 'jonasmuylaert'
+        projectName: 'webshop'
+    - task: SonarCloudAnalyze@1
+    - task: SonarCloudPublish@1
+      inputs:
+        pollingTimeoutSec: '300'
     - task: Docker@2
       displayName: Build an image
       inputs:
