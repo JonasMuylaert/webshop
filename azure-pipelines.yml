@@ -24,9 +24,8 @@ stages:
       inputs:
         SonarCloud: 'SonarCloud'
         organization: 'jonasmuylaert'
-        scannerMode: 'MSBuild'
-        projectKey: 'jonasmuylaert'
-        projectName: 'webshop'
+        scannerMode: 'CLI'
+        configMode: 'file'
     - task: SonarCloudAnalyze@1
     - task: SonarCloudPublish@1
       inputs:
