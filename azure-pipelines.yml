@@ -25,7 +25,10 @@ stages:
         SonarCloud: 'SonarCloud'
         organization: 'jonasmuylaert'
         scannerMode: 'CLI'
-        configMode: 'file'
+        configMode: 'manual'
+        cliProjectKey: 'jonasmuylaert'
+        cliProjectName: 'webshop'
+        cliSources: '.'
     - task: SonarCloudAnalyze@1
     - task: SonarCloudPublish@1
       inputs:
