@@ -37,7 +37,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'DockerHub'
-        repository: 'webshop'
+        repository: 'jonasmylaert/webshop'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
