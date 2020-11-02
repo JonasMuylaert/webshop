@@ -13,9 +13,10 @@ const User = require('./models/user');
 const errorController = require('./controllers/error');
 
 const app = express();
-
+const pass = 'TERcle27'
+//Deze moet er wel echt nog uit
 const MONGODB_URI =
-	'mongodb+srv://jonas:TERcle27@shop-evr9v.mongodb.net/shop?retryWrites=true&w=majority';
+	`mongodb+srv://jonas:${pass}@shop-evr9v.mongodb.net/shop?retryWrites=true&w=majority`;
 
 const store = new MongodbStore({
 	uri: MONGODB_URI,
